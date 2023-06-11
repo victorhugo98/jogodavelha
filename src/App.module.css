@@ -1,0 +1,104 @@
+.container {
+  padding-top: 24px;
+  padding-bottom: 24px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  width: 900px;
+  margin: 0 auto;
+  position: relative;
+
+}
+.element:nth-child(n+1){
+  border-right: 2px solid grey;
+
+}
+
+.element:nth-child(3n ){
+  border-right: none;
+
+}
+.element:nth-child(n+7){
+  border-bottom: none;
+
+}
+.element {
+  border-bottom: 2px solid grey;
+  background-color: #e9e9e9;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 50px;
+  cursor: pointer;
+}
+.element:hover{
+  background-color: #ccc;
+}
+.horizontal::after {
+  content: "";
+  display: inline-block;
+  width: 800px;
+  height: 12px;
+  background-color: black;
+  position: absolute;
+  z-index: 100;
+  transition: 0.4s;
+}
+
+.vertical::after {
+  content: "";
+  display: inline-block;
+  width: 800px;
+  height: 12px;
+  background-color: black;
+  position: absolute;
+  z-index: 100;
+  rotate: 90deg;
+  transition: 0.4s;
+}
+
+.diagonal1::after {
+  content: "";
+  display: inline-block;
+  width: 800px;
+  height: 12px;
+  background-color: black;
+  position: absolute;
+  z-index: 100;
+  rotate: 45deg;
+  transition: 0.4s;
+}
+
+.diagonal2::after {
+  content: "";
+  display: inline-block;
+  width: 800px;
+  height: 12px;
+  background-color: black;
+  position: absolute;
+  z-index: 100;
+  rotate: -45deg;
+  transition: 0.4s;
+}
+
+.vez{
+  position: absolute;
+  top: 300px;
+  right: -330px;
+  
+}
+.h2{
+  text-align: center;
+  font-family: sans-serif;
+}
+.button{
+  padding: 1rem 2rem;
+  background-color: pink  ;
+  font-family: sans-serif;
+  font-size: 1rem;
+  border: 1px solid red;
+  margin-top: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  box-shadow: 0 4px 3px #ccc;
+}
